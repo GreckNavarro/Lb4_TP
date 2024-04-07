@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Suelo
+  - Enemy
+  - Hearth
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -13,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Suelo
-  - 
+  - Enemy
   - 
   - 
   - 
