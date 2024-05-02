@@ -214,6 +214,7 @@ MonoBehaviour:
   damage: 1
   velocity: 2
   currentTargetIndex: 0
+  ModifyHealth: {fileID: 11400000, guid: 71140f0330436c14088d709a0fa33fe5, type: 2}
 --- !u!1 &7042127675461111176
 GameObject:
   m_ObjectHideFlags: 0

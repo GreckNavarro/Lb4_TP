@@ -5,24 +5,25 @@ using System;
 
 public class HealthSystem : MonoBehaviour
 {
-    public static Action<int> ModifyHealth;
-    public static Action<int> UpdateHealth;
+    [SerializeField] HandlerEvents ModifyHealth;
+    [SerializeField] HandlerEvents UpdateHealth;
 
+   
      int health = 10;
 
     private void OnEnable()
     {
-        ModifyHealth += UpdateCurrentHealth;
+        ModifyHealth.eventScriptableObject += UpdateCurrentHealth;
     }
     private void OnDisable()
     {
-        ModifyHealth -= UpdateCurrentHealth;
+        ModifyHealth.eventScriptableObject -= UpdateCurrentHealth;
     }
 
     public void UpdateCurrentHealth(int number)
     {
         health += number;
-        UpdateHealth?.Invoke(health);
+        UpdateHealth.InvokeAction(health);
         if(health <= 0)
         {
             GameManager.onLoose?.Invoke();

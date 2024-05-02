@@ -16,19 +16,27 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameManager GM;
 
+    [SerializeField] HandlerEvents UpdateEventSO;
+    [SerializeField] HandlerEvents UpdateHealthSO;
+
     private void OnEnable()
     {
 
-        HealthSystem.UpdateHealth += UpdateLife;
-        PointSystem.UpdatePoints += UpdateCoins;
+        UpdateHealthSO.eventScriptableObject += UpdateLife;
+        UpdateEventSO.eventScriptableObject += UpdateCoins;
+
+        //Modificar
         GameManager.onWin += ActiveWin;
         GameManager.onLoose += ActiveLoose;
     }
 
     private void OnDisable()
     {
-        HealthSystem.UpdateHealth -= UpdateLife;
-        PointSystem.UpdatePoints -= UpdateCoins;
+        UpdateHealthSO.eventScriptableObject -= UpdateLife;
+        UpdateEventSO.eventScriptableObject -= UpdateCoins;
+
+
+        //Modificar
         GameManager.onWin -= ActiveWin;
         GameManager.onLoose -= ActiveLoose;
     }

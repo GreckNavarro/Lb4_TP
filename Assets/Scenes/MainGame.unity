@@ -1373,6 +1373,8 @@ MonoBehaviour:
   LooseCanvas: {fileID: 671293446}
   looseText: {fileID: 1759948286}
   GM: {fileID: 1686493971}
+  UpdateEventSO: {fileID: 11400000, guid: 331bed7bf9ba60a47bb7804f7fa2e98b, type: 2}
+  UpdateHealthSO: {fileID: 11400000, guid: 4b7e2d2addbdf894382ce0107f307df5, type: 2}
 --- !u!4 &177536186
 Transform:
   m_ObjectHideFlags: 0
@@ -4072,6 +4074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6211f675f99a8d24f97b56a32c840a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ModifyHealth: {fileID: 11400000, guid: 71140f0330436c14088d709a0fa33fe5, type: 2}
+  UpdateHealth: {fileID: 11400000, guid: 4b7e2d2addbdf894382ce0107f307df5, type: 2}
 --- !u!114 &1459677856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4084,6 +4088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20a21c9bd1292e4cb6b3154e0c96d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GainPoints: {fileID: 11400000, guid: 6815257315adea94e9058b1bc1ce611b, type: 2}
+  UpdatePoints: {fileID: 11400000, guid: 331bed7bf9ba60a47bb7804f7fa2e98b, type: 2}
 --- !u!1 &1467983151
 GameObject:
   m_ObjectHideFlags: 0
