@@ -5,13 +5,14 @@ using UnityEngine;
 public class Coins : MonoBehaviour
 {
     [SerializeField] int value;
+    [SerializeField] HandlerEvents GainPoints;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            PointSystem.GainPoints?.Invoke(value);
+            GainPoints.InvokeAction(value);
             Destroy(gameObject);
         }
     }

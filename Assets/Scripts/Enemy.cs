@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] int damage;
     [SerializeField] private int velocity;
     [SerializeField] private int currentTargetIndex = 0;
+    [SerializeField] HandlerEvents ModifyHealth;
+
 
 
 
@@ -43,7 +45,7 @@ public class Enemy : MonoBehaviour
         {
             if(collision.gameObject.GetComponent<SpriteRenderer>().color != gameObject.GetComponent<SpriteRenderer>().color)
             {
-                HealthSystem.ModifyHealth?.Invoke(-damage);
+                ModifyHealth.InvokeAction(-damage);
             }
         }
     }

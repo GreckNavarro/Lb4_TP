@@ -136,6 +136,7 @@ MonoBehaviour:
   damage: 2
   velocity: 10
   currentTargetIndex: 0
+  ModifyHealth: {fileID: 11400000, guid: 71140f0330436c14088d709a0fa33fe5, type: 2}
 --- !u!50 &5008408618542002752
 Rigidbody2D:
   serializedVersion: 4

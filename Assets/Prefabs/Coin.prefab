@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 10
+  GainPoints: {fileID: 11400000, guid: 6815257315adea94e9058b1bc1ce611b, type: 2}

@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  ModifyHealth: {fileID: 11400000, guid: 71140f0330436c14088d709a0fa33fe5, type: 2}
