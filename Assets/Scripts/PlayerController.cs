@@ -29,16 +29,18 @@ public class PlayerController : MonoBehaviour
     private Action isMovement;
 
     [SerializeField] private bool inFigure;
-    
+    public IvHandlerEvent onWin;
+    public IvHandlerEvent onLoose;
+
     private void OnEnable()
     {
-        GameManager.onLoose += StopController;
-        GameManager.onWin += StopController;
+        onLoose.OnGameCondition += StopController;
+        onWin.OnGameCondition += StopController;
     }
     private void OnDisable()
     {
-        GameManager.onLoose -= StopController;
-        GameManager.onWin -= StopController;
+        onLoose.OnGameCondition -= StopController;
+        onWin.OnGameCondition -= StopController;
     }
 
 

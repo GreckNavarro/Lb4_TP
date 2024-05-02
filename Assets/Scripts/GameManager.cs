@@ -8,18 +8,21 @@ public class GameManager : MonoBehaviour
     float time;
     bool Pause;
 
-    public static Action onWin;
-    public static Action onLoose;
+    //public static Action onWin;
+    //public static Action onLoose;
+
+    public IvHandlerEvent onWin;
+    public IvHandlerEvent onLoose;
 
     private void OnEnable()
     {
-        onWin += EndGame;
-        onLoose += EndGame;
+        onWin.OnGameCondition += EndGame;
+        onLoose.OnGameCondition += EndGame;
     }
     private void OnDisable()
     {
-        onWin -= EndGame;
-        onLoose -= EndGame;
+        onWin.OnGameCondition -= EndGame;
+        onLoose.OnGameCondition -= EndGame;
     }
 
     private void Start()

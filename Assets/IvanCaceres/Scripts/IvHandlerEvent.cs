@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[CreateAssetMenu(fileName = "Game Condition", menuName = "ScriptableObject/HandlerEventPoints", order = 1)]
+[CreateAssetMenu(fileName = "Game Condition", menuName = "ScriptableObjects/HandlerEventCondition", order = 2)]
 public class IvHandlerEvent : ScriptableObject
 {
     public event Action OnGameCondition;

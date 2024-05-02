@@ -1375,6 +1375,8 @@ MonoBehaviour:
   GM: {fileID: 1686493971}
   UpdateEventSO: {fileID: 11400000, guid: 331bed7bf9ba60a47bb7804f7fa2e98b, type: 2}
   UpdateHealthSO: {fileID: 11400000, guid: 4b7e2d2addbdf894382ce0107f307df5, type: 2}
+  onWin: {fileID: 11400000, guid: b91f9560f22a5a044a44ba43a0e090db, type: 2}
+  onLoose: {fileID: 11400000, guid: 2da296eafc3dd0d4b9e11775d11951bd, type: 2}
 --- !u!4 &177536186
 Transform:
   m_ObjectHideFlags: 0
@@ -4000,6 +4002,8 @@ MonoBehaviour:
   saltos: 0
   colornumber: 0
   inFigure: 0
+  onWin: {fileID: 11400000, guid: b91f9560f22a5a044a44ba43a0e090db, type: 2}
+  onLoose: {fileID: 11400000, guid: 2da296eafc3dd0d4b9e11775d11951bd, type: 2}
 --- !u!114 &1459677854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4076,6 +4080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModifyHealth: {fileID: 11400000, guid: 71140f0330436c14088d709a0fa33fe5, type: 2}
   UpdateHealth: {fileID: 11400000, guid: 4b7e2d2addbdf894382ce0107f307df5, type: 2}
+  IvHandlerLoose: {fileID: 11400000, guid: 2da296eafc3dd0d4b9e11775d11951bd, type: 2}
 --- !u!114 &1459677856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4090,6 +4095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GainPoints: {fileID: 11400000, guid: 6815257315adea94e9058b1bc1ce611b, type: 2}
   UpdatePoints: {fileID: 11400000, guid: 331bed7bf9ba60a47bb7804f7fa2e98b, type: 2}
+  IvHandlerWin: {fileID: 11400000, guid: b91f9560f22a5a044a44ba43a0e090db, type: 2}
 --- !u!1 &1467983151
 GameObject:
   m_ObjectHideFlags: 0
@@ -5177,6 +5183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a391921c1b2c1e447a5bf9e97912bf2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onWin: {fileID: 11400000, guid: b91f9560f22a5a044a44ba43a0e090db, type: 2}
+  onLoose: {fileID: 11400000, guid: 2da296eafc3dd0d4b9e11775d11951bd, type: 2}
 --- !u!4 &1686493972
 Transform:
   m_ObjectHideFlags: 0

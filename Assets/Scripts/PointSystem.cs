@@ -6,7 +6,7 @@ public class PointSystem : MonoBehaviour
 {
     [SerializeField] HandlerEvents GainPoints;
     [SerializeField] HandlerEvents UpdatePoints;
-
+    public IvHandlerEvent IvHandlerWin;
     
     int Points = 0;
 
@@ -24,7 +24,8 @@ public class PointSystem : MonoBehaviour
         UpdatePoints.InvokeAction(Points);
         if (Points >= 90)
         {
-            GameManager.onWin?.Invoke();
+            //GameManager.onWin?.Invoke();
+            IvHandlerWin.ActivateGameCondition();
         }
     }
 }

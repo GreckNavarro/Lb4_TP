@@ -19,6 +19,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] HandlerEvents UpdateEventSO;
     [SerializeField] HandlerEvents UpdateHealthSO;
 
+    public IvHandlerEvent onWin;
+    public IvHandlerEvent onLoose;
+
     private void OnEnable()
     {
 
@@ -26,8 +29,8 @@ public class UIManager : MonoBehaviour
         UpdateEventSO.eventScriptableObject += UpdateCoins;
 
         //Modificar
-        GameManager.onWin += ActiveWin;
-        GameManager.onLoose += ActiveLoose;
+        onWin.OnGameCondition += ActiveWin;
+        onLoose.OnGameCondition += ActiveLoose;
     }
 
     private void OnDisable()
@@ -37,8 +40,8 @@ public class UIManager : MonoBehaviour
 
 
         //Modificar
-        GameManager.onWin -= ActiveWin;
-        GameManager.onLoose -= ActiveLoose;
+        onWin.OnGameCondition -= ActiveWin;
+        onLoose.OnGameCondition -= ActiveLoose;
     }
 
 

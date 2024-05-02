@@ -8,6 +8,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] HandlerEvents ModifyHealth;
     [SerializeField] HandlerEvents UpdateHealth;
 
+    public IvHandlerEvent IvHandlerLoose;
    
      int health = 10;
 
@@ -26,7 +27,8 @@ public class HealthSystem : MonoBehaviour
         UpdateHealth.InvokeAction(health);
         if(health <= 0)
         {
-            GameManager.onLoose?.Invoke();
+            //GameManager.onLoose?.Invoke();
+            IvHandlerLoose.ActivateGameCondition();
         }
 
     }
