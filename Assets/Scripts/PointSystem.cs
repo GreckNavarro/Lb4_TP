@@ -24,7 +24,7 @@ public class PointSystem : MonoBehaviour
         UpdatePoints.InvokeAction(Points);
         if (Points >= 90)
         {
-            //GameManager.onWin?.Invoke();
+           
             IvHandlerWin.ActivateGameCondition();
         }
     }

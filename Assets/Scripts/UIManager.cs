@@ -28,7 +28,6 @@ public class UIManager : MonoBehaviour
         UpdateHealthSO.eventScriptableObject += UpdateLife;
         UpdateEventSO.eventScriptableObject += UpdateCoins;
 
-        //Modificar
         onWin.OnGameCondition += ActiveWin;
         onLoose.OnGameCondition += ActiveLoose;
     }
@@ -39,7 +38,7 @@ public class UIManager : MonoBehaviour
         UpdateEventSO.eventScriptableObject -= UpdateCoins;
 
 
-        //Modificar
+  
         onWin.OnGameCondition -= ActiveWin;
         onLoose.OnGameCondition -= ActiveLoose;
     }

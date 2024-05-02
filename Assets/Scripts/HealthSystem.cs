@@ -27,7 +27,7 @@ public class HealthSystem : MonoBehaviour
         UpdateHealth.InvokeAction(health);
         if(health <= 0)
         {
-            //GameManager.onLoose?.Invoke();
+           
             IvHandlerLoose.ActivateGameCondition();
         }
 
